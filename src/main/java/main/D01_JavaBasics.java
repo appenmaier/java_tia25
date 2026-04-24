@@ -2,8 +2,16 @@ package main;
 
 import java.util.Scanner;
 
+/**
+ * Java Basics
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class D01_JavaBasics {
 
+   @SuppressWarnings("resource")
    public static void main(String[] args) {
       /* Datentypen und Datenobjekte */
       int length = "Hello World".length();
@@ -101,6 +109,28 @@ public class D01_JavaBasics {
          System.out.println("Nö, das war wohl nix");
          System.out.println(text);
          System.out.println(input);
+      }
+
+      /* Arrays */
+      String[] names = new String[3];
+      names[0] = "Hans";
+      names[1] = "Peter";
+      names[2] = "Lisa";
+      System.out.println(names[0]);
+      System.out.println(names[1]);
+      System.out.println(names[2]);
+      System.out.println(names.length);
+
+      int[] numbers = {5, 1, 7, 2, 5, -6, 0};
+      numbers[4] = 8;
+
+      for (int i = 0; i < numbers.length; i++) {
+         int number = numbers[i];
+         System.out.println(number);
+      }
+
+      for (int number : numbers) {
+         System.out.println(number);
       }
    }
 
