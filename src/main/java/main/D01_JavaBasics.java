@@ -5,12 +5,20 @@ import java.util.Scanner;
 /**
  * Java Basics
  *
+ * <p>Demonstrates primitive data types, {@link java.util.Scanner} input, conditional statements,
+ * switch expressions, loops, string comparison, and arrays.
+ *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
 public class D01_JavaBasics {
 
+   /**
+    * Entry point — runs all Java-basics demos sequentially.
+    *
+    * @param args command-line arguments (not used)
+    */
    @SuppressWarnings("resource")
    public static void main(String[] args) {
       /* Datentypen und Datenobjekte */

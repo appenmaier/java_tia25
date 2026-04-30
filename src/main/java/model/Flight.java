@@ -12,8 +12,11 @@ import java.time.LocalDate;
 public class Flight {
 
    /* Attribute */
+   /** The flight connection this flight operates on. */
    public FlightConnection flightConnection;
+   /** The date on which this flight departs. */
    public LocalDate flightDate;
+   /** The ticket price for this flight in Euro. */
    public double flightPriceInEuro;
 
 }
