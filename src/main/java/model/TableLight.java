@@ -1,5 +1,9 @@
 package model;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+
 /**
  * Table Light
  *
@@ -7,16 +11,22 @@ package model;
  * @version 1.0
  *
  */
+@ToString
+@EqualsAndHashCode
+@Getter
 public class TableLight {
 
    private boolean isConnected;
    private boolean isOn;
    private LightBulb lightBulb;
+   private final PlugType plugType;
 
    public final static String DESCRIPTION = "Tischleuchte";
 
    /** Creates a table light without a light bulb. */
-   public TableLight() {}
+   public TableLight() {
+      plugType = PlugType.TYPE_F;
+   }
 
    /**
     * Creates a table light with the given light bulb.
@@ -25,6 +35,7 @@ public class TableLight {
     */
    public TableLight(LightBulb lightBulb) {
       this.lightBulb = lightBulb;
+      plugType = PlugType.TYPE_F;
    }
 
    /**
@@ -32,8 +43,9 @@ public class TableLight {
     *
     * @param colorOfLightBulb the color of the light bulb to install
     */
-   public TableLight(String colorOfLightBulb) {
+   public TableLight(String colorOfLightBulb, PlugType plugType) {
       lightBulb = new LightBulb(colorOfLightBulb);
+      this.plugType = plugType;
    }
 
    /** Turns the light on. */
