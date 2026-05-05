@@ -15,8 +15,11 @@ import lombok.Data;
 @Data
 public class PersonLombok {
 
+   /** The person's name. */
    private String name;
+   /** The person's age. */
    private int age;
+   /** A single-character DNA marker. */
    private final char dna;
 
 }

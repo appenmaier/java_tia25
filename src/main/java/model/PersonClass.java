@@ -11,8 +11,11 @@ import java.util.Objects;
  */
 public class PersonClass {
 
+   /** The person's name. */
    private String name;
+   /** The person's age. */
    private int age;
+   /** A single-character DNA marker. */
    private final char dna;
 
    /**

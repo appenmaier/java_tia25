@@ -18,12 +18,23 @@ import model.TableLight;
 /**
  * Java API
  *
+ * <p>Demonstrates arithmetic and type casting, {@link java.util.Random} pseudo-random numbers,
+ * {@link java.util.LinkedList} and {@link java.util.ArrayList} collections, the date/time API
+ * ({@link java.time.LocalDate}, {@link java.time.LocalTime}, {@link java.time.LocalDateTime}),
+ * system properties, reading data from a file with {@link java.util.Scanner}, and enumerations.
+ *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
 public class D03_JavaApi {
 
+   /**
+    * Entry point — runs all Java-API demos sequentially.
+    *
+    * @param args command-line arguments (not used)
+    * @throws java.io.FileNotFoundException if the persons resource file cannot be found
+    */
    public static void main(String[] args) throws FileNotFoundException {
       /* Mathematische Berechnungen */
       int a = 5, b = 3;

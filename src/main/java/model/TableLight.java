@@ -7,6 +7,8 @@ import lombok.ToString;
 /**
  * Table Light
  *
+ * <p>Models a desk lamp that can be plugged in, switched on/off, and fitted with a light bulb.
+ *
  * @author Daniel Appenmaier
  * @version 1.0
  *
@@ -16,11 +18,16 @@ import lombok.ToString;
 @Getter
 public class TableLight {
 
+   /** Whether the lamp is connected to the power supply. */
    private boolean isConnected;
+   /** Whether the lamp's switch is in the on position. */
    private boolean isOn;
+   /** The light bulb currently installed, or {@code null} if none. */
    private LightBulb lightBulb;
+   /** The plug type of this lamp's power cord. */
    private final PlugType plugType;
 
+   /** Human-readable product description. */
    public final static String DESCRIPTION = "Tischleuchte";
 
    /** Creates a table light without a light bulb. */
@@ -42,6 +49,7 @@ public class TableLight {
     * Creates a table light and installs a new light bulb of the given color.
     *
     * @param colorOfLightBulb the color of the light bulb to install
+    * @param plugType         the plug type of this lamp's power cord
     */
    public TableLight(String colorOfLightBulb, PlugType plugType) {
       lightBulb = new LightBulb(colorOfLightBulb);

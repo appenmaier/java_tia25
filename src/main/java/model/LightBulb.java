@@ -11,6 +11,7 @@ import java.util.Objects;
  */
 public class LightBulb {
 
+   /** The color of this light bulb. */
    private final String color;
 
    /**
