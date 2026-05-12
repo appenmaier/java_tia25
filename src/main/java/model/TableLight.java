@@ -7,21 +7,22 @@ import lombok.ToString;
 /**
  * Table Light
  *
- * <p>Models a desk lamp that can be plugged in, switched on/off, and fitted with a light bulb.
+ * <p>
+ * Models a desk lamp that can be plugged in, switched on/off, and fitted with a light bulb.
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-@ToString
-@EqualsAndHashCode
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 @Getter
-public class TableLight {
+public class TableLight extends Light {
 
    /** Whether the lamp is connected to the power supply. */
    private boolean isConnected;
-   /** Whether the lamp's switch is in the on position. */
-   private boolean isOn;
+   // /** Whether the lamp's switch is in the on position. */
+   // private boolean isOn;
    /** The light bulb currently installed, or {@code null} if none. */
    private LightBulb lightBulb;
    /** The plug type of this lamp's power cord. */
@@ -49,22 +50,22 @@ public class TableLight {
     * Creates a table light and installs a new light bulb of the given color.
     *
     * @param colorOfLightBulb the color of the light bulb to install
-    * @param plugType         the plug type of this lamp's power cord
+    * @param plugType the plug type of this lamp's power cord
     */
    public TableLight(String colorOfLightBulb, PlugType plugType) {
       lightBulb = new LightBulb(colorOfLightBulb);
       this.plugType = plugType;
    }
 
-   /** Turns the light on. */
-   public void switchOn() {
-      isOn = true;
-   }
+   // /** Turns the light on. */
+   // public void switchOn() {
+   // isOn = true;
+   // }
 
-   /** Turns the light off. */
-   public void switchOff() {
-      isOn = false;
-   }
+   // /** Turns the light off. */
+   // public void switchOff() {
+   // isOn = false;
+   // }
 
    /** Connects the light to the power supply. */
    public void plugIn() {
@@ -93,8 +94,9 @@ public class TableLight {
     *
     * @return {@code true} if connected, switched on, and a bulb is installed
     */
+   @Override
    public boolean isShining() {
-      return isConnected && isOn && lightBulb != null;
+      return isConnected && isOn() && lightBulb != null;
    }
 
    /**
@@ -106,14 +108,14 @@ public class TableLight {
       return isConnected;
    }
 
-   /**
-    * Returns whether the light switch is in the on position.
-    *
-    * @return {@code true} if switched on
-    */
-   public boolean isOn() {
-      return isOn;
-   }
+   // /**
+   // * Returns whether the light switch is in the on position.
+   // *
+   // * @return {@code true} if switched on
+   // */
+   // public boolean isOn() {
+   // return isOn;
+   // }
 
    /**
     * Returns the currently installed light bulb.
