@@ -3,7 +3,7 @@ package main;
 import java.util.Scanner;
 
 /**
- * Java Basics
+ * Demo 1: Java Basics
  *
  * <p>Demonstrates primitive data types, {@link java.util.Scanner} input, conditional statements,
  * switch expressions, loops, string comparison, and arrays.

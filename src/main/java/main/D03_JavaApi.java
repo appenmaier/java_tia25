@@ -16,7 +16,7 @@ import model.PlugType;
 import model.TableLight;
 
 /**
- * Java API
+ * Demo 3: Java API
  *
  * <p>Demonstrates arithmetic and type casting, {@link java.util.Random} pseudo-random numbers,
  * {@link java.util.LinkedList} and {@link java.util.ArrayList} collections, the date/time API
