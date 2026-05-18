@@ -27,49 +27,49 @@ public class D01_JavaBasics {
 
       Scanner scanner = new Scanner(System.in);
 
-      System.out.print("Gib bitte Deinen Namen ein: ");
+      System.out.print("Please enter your name: ");
       String name = scanner.next();
 
       int age = 0;
       boolean loop;
       do {
-         System.out.print("Gib bitte Dein Alter ein: ");
+         System.out.print("Please enter your age: ");
          age = scanner.nextInt();
          if (age > 0 && age < 150) {
             loop = false;
          } else {
-            System.out.println("ungültiger Wertebereich");
+            System.out.println("invalid value range");
             loop = true;
          }
       } while (loop);
 
-      System.out.print("Gib bitte Deine Größe in Meter ein: ");
+      System.out.print("Please enter your height in meters: ");
       double sizeInM = scanner.nextDouble();
 
-      System.out.print("Gib bitte Dein Geschlecht ein (m, w, d): ");
+      System.out.print("Please enter your gender (m, f, d): ");
       char gender = scanner.next().charAt(0);
 
-      System.out.print("Gib bitte ein, ob Du glücklich bist (true, false): ");
+      System.out.print("Please enter whether you are happy (true, false): ");
       boolean isHappy = scanner.nextBoolean();
 
       /* Verzweigungen */
       // Vergleichsoperatoren: >, >=, <, <=, ==, !=
       // Logische Operatoren: &&, ||, !
       if ((gender == 'm' || gender == 'M') && age >= 18) {
-         System.out.println("Hallo Herr " + name);
-      } else if ((gender == 'w' || gender == 'W') && age >= 18) {
-         System.out.println("Hallo Frau " + name);
+         System.out.println("Hello Mr. " + name);
+      } else if ((gender == 'f' || gender == 'F') && age >= 18) {
+         System.out.println("Hello Ms. " + name);
       } else {
-         System.out.println("Hallo " + name);
+         System.out.println("Hello " + name);
       }
 
       if (age > 65) {
-         System.out.println("Hallo, Du alter Sack");
+         System.out.println("Hello, you old-timer");
       } else {
-         System.out.println("Wie gehts, Jungspund?");
+         System.out.println("Hey there, youngster!");
       }
 
-      System.out.println((age > 65) ? "Hallo Du alter Sack" : "Wie gehts, Jungspund?");
+      System.out.println((age > 65) ? "Hello, you old-timer" : "Hey there, youngster!");
 
       System.out.println(name);
       System.out.println(age);
@@ -80,9 +80,9 @@ public class D01_JavaBasics {
       /* Fallunterscheidungen */
       String genderText;
       genderText = switch (gender) {
-         case 'm', 'M' -> "männlich";
-         case 'w', 'W' -> "weiblich";
-         case 'd', 'D' -> "divers";
+         case 'm', 'M' -> "male";
+         case 'f', 'F' -> "female";
+         case 'd', 'D' -> "diverse";
          default       -> gender + "";
       };
       System.out.println(genderText);
@@ -108,13 +108,13 @@ public class D01_JavaBasics {
 
       /* Vergleich von Zeichenketten */
       String text = "Hello";
-      System.out.print("Gib bitte die Zeichenkette \"Hello\" ein: ");
+      System.out.print("Please enter the string \"Hello\": ");
       String input = scanner.next();
 
       if (text.equals(input)) {
-         System.out.println("Gut gemacht!");
+         System.out.println("Well done!");
       } else {
-         System.out.println("Nö, das war wohl nix");
+         System.out.println("Nope, that was not it");
          System.out.println(text);
          System.out.println(input);
       }

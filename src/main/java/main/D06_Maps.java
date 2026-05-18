@@ -39,15 +39,15 @@ public class D06_Maps {
       /* Wert überschreiben + Wert lesen */
       Exam oldExam =
             studentsWithExam.put(new Student("1102636", "Anna"), new Exam(LocalDate.now(), 1.2));
-      System.out.println("Annas alte PL: " + oldExam);
-      System.out.println("Annas neue PL: " + studentsWithExam.get(new Student("1102636", "Anna")));
+      System.out.println("Anna's old exam: " + oldExam);
+      System.out.println("Anna's new exam: " + studentsWithExam.get(new Student("1102636", "Anna")));
 
       /* Werte ausgeben */
       System.out.println(studentsWithExam);
 
       /* Datensammlungen: die Menge aller Schlüssel */
       System.out.println();
-      System.out.println("Namensliste:");
+      System.out.println("Name list:");
       for (Student s : studentsWithExam.keySet()) {
          System.out.println(s.getName() + " [ ]");
       }
@@ -59,11 +59,11 @@ public class D06_Maps {
          total += e.getGrade();
          counter++;
       }
-      System.out.println("Durchschnittsnote: " + (total / counter));
+      System.out.println("Average grade: " + (total / counter));
 
       /* Datensammlungen: die Menge aller Schlüssel-Wert-Paare / Einträge */
       System.out.println();
-      System.out.println("Notenliste: ");
+      System.out.println("Grade list: ");
       for (Entry<Student, Exam> entry : studentsWithExam.entrySet()) {
          Student s = entry.getKey();
          Exam e = entry.getValue();

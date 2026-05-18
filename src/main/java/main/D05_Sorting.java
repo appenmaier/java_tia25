@@ -52,7 +52,7 @@ public class D05_Sorting {
       List<Movie> movies = new ArrayList<>();
       movies.add(new Movie("John Wick 4", "2023", 7.6));
       movies.add(new Movie("Disaster Movie", "2008", 1.9));
-      movies.add(new Movie("Der Pate", "1972", 9.2));
+      movies.add(new Movie("The Godfather", "1972", 9.2));
 
       System.out.println(movies);
       Collections.sort(movies);

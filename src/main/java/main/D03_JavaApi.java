@@ -141,8 +141,8 @@ public class D03_JavaApi {
       ArrayList<TableLight> lights = new ArrayList<>();
 
       lights.add(new TableLight());
-      lights.add(new TableLight(new LightBulb("rot")));
-      lights.add(new TableLight("grün", PlugType.TYPE_F));
+      lights.add(new TableLight(new LightBulb("red")));
+      lights.add(new TableLight("green", PlugType.TYPE_F));
 
       int total = 0;
       for (TableLight light : lights) {

@@ -29,7 +29,7 @@ public class TableLight extends Light {
    private final PlugType plugType;
 
    /** Human-readable product description. */
-   public final static String DESCRIPTION = "Tischleuchte";
+   public final static String DESCRIPTION = "Table lamp";
 
    /** Creates a table light without a light bulb. */
    public TableLight() {
@@ -70,7 +70,7 @@ public class TableLight extends Light {
    /** Connects the light to the power supply. */
    public void plugIn() throws AlreadyPluggedInException {
       if (isConnected) {
-         throw new AlreadyPluggedInException("Der Stecker ist bereits eingesteckt.");
+         throw new AlreadyPluggedInException("The plug is already connected.");
       }
 
       isConnected = true;

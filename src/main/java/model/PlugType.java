@@ -17,9 +17,9 @@ import lombok.ToString;
 public enum PlugType {
 
    /** Schuko plug (CEE 7/4), used in Europe. */
-   TYPE_F("Typ F", "CEE7/4", "Europa"),
+   TYPE_F("Type F", "CEE7/4", "Europe"),
    /** Australian/New Zealand plug (AS/NZS 3112). */
-   TYPE_I("Typ I", "AS/NZS 3112", "ANZ");
+   TYPE_I("Type I", "AS/NZS 3112", "ANZ");
 
    /** Human-readable name of the plug type. */
    private final String description;
