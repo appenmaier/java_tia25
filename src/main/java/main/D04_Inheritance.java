@@ -1,18 +1,20 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import model.AlreadyPluggedInException;
 import model.FlashLight;
 import model.Light;
 import model.LightBulb;
 import model.TableLight;
 
 /**
- * Inheritance
+ * Demo 4: Inheritance
  *
  * <p>Demonstrates inheritance with an abstract base class, method overriding, upcasting,
- * downcasting, and dynamic polymorphism using {@link model.Light}, {@link model.TableLight},
- * and {@link model.FlashLight}.
+ * downcasting, and dynamic polymorphism using {@link model.Light}, {@link model.TableLight}, and
+ * {@link model.FlashLight}.
  *
  * @author Daniel Appenmaier
  * @version 1.0
@@ -25,14 +27,14 @@ public class D04_Inheritance {
     *
     * @param args command-line arguments (not used)
     */
-   public static void main(String[] args) {
+   public static void main(String[] args) throws AlreadyPluggedInException {
       /* Ansatz ohne Vererbung */
-      ArrayList<TableLight> tableLights = new ArrayList<>();
+      List<TableLight> tableLights = new ArrayList<>();
       tableLights.add(new TableLight());
       tableLights.add(new TableLight());
       tableLights.add(new TableLight());
 
-      ArrayList<FlashLight> flashLights = new ArrayList<>();
+      List<FlashLight> flashLights = new ArrayList<>();
       flashLights.add(new FlashLight());
       flashLights.add(new FlashLight());
       flashLights.add(new FlashLight());

@@ -2,6 +2,7 @@ package main;
 
 import java.time.LocalDate;
 
+import model.AlreadyPluggedInException;
 import model.Flight;
 import model.FlightConnection;
 import model.LightBulb;
@@ -12,7 +13,7 @@ import model.TableLight;
 import utility.StringArrayHelper;
 
 /**
- * Object Oriented Programming
+ * Demo 2: Object Oriented Programming
  *
  * <p>Demonstrates classes with public fields, static utility helpers vs. instance methods,
  * encapsulation via getters/setters, and data classes (plain class, record, Lombok).
@@ -72,7 +73,14 @@ public class D02_ObjectOrientedProgramming {
       TableLight light1 = new TableLight();
       System.out.println(light1.isShining() ? light1.getLightBulb().getColor() : "dunkel");
       light1.changeLightBulb(redLightBulb);
-      light1.plugIn();
+
+      try {
+         light1.plugIn();
+         light1.plugIn();
+      } catch (AlreadyPluggedInException e) {
+         System.err.println(e.getMessage());
+      }
+
       light1.switchOn();
       System.out.println(light1.isShining() ? light1.getLightBulb().getColor() : "dunkel");
 

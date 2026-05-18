@@ -68,7 +68,11 @@ public class TableLight extends Light {
    // }
 
    /** Connects the light to the power supply. */
-   public void plugIn() {
+   public void plugIn() throws AlreadyPluggedInException {
+      if (isConnected) {
+         throw new AlreadyPluggedInException("Der Stecker ist bereits eingesteckt.");
+      }
+
       isConnected = true;
    }
 
